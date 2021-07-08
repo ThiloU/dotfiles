@@ -1,0 +1,113 @@
+/*
+ *
+ * Author  : Aditya Shakya
+ * Mail    : adi1090x@gmail.com
+ * Github  : @adi1090x
+ * Twitter : @adi1090x
+ *
+ */
+
+configuration {
+	font:							"FantasqueSansMono Nerd Font 14";
+    show-icons:                     false;
+	icon-theme: 					"Papirus";
+    drun-display-format:            "{name}";
+    disable-history:                false;
+    fullscreen:                     true;
+	hide-scrollbar: 				true;
+	sidebar-mode: 					false;
+}
+
+@import "styles/nordicOwn.rasi"
+
+window {
+    transparency:                   "real";
+    background-color:               @background;
+    text-color:                     @text;
+    border-radius:                  0px;
+}
+
+prompt {
+    enabled: 						true;
+    padding:                        1% 1% 1% 0%;
+	background-color: 				@alpha;
+	text-color: 					@textAlt;
+}
+
+textbox-prompt-colon {
+	expand: 						false;
+	str: 							"System |";
+	background-color: 				@alpha;
+	text-color: 					@textAlt;
+    padding:                        1% 0% 1% 26.5%;
+}
+
+inputbar {
+	children: 						[ textbox-prompt-colon, prompt ];
+    background-color:               @accent;
+    text-color:                     @text;
+    expand:                         false;
+    border-radius:                  15px;
+    margin:                         0% 20% 0% 0%;
+    padding:                        0.5%;
+    position:                       center;
+}
+
+listview {
+    background-color:               @alpha;
+    margin:                         0% 0% 0% 0%;
+    spacing:                        3%;
+    cycle:                          false;
+    dynamic:                        true;
+    layout:                         horizontal;
+}
+
+mainbox {
+    background-color:               @background;
+    children:                       [ inputbar, listview ];
+    spacing:                        5%;
+    padding:                        32.50% 0% 0% 13.25%;
+}
+
+element {
+    background-color:               @alpha;
+    text-color:                     @text;
+    orientation:                    horizontal;
+    border-radius:                  25px;
+}
+
+element-text {
+	font:							"feather 64";
+    expand:                         true;
+    horizontal-align:               0.5;
+    vertical-align:                 0.5;
+    margin:                         6.5% 4% 13.5% 4%;
+}
+
+element normal.urgent,
+element alternate.urgent {
+    background-color:               @urgent;
+    text-color:                     @text;
+    border-radius:                  0.2%;
+}
+
+element normal.active,
+element alternate.active {
+    background-color:               @background-alt;
+    text-color:                     @text;
+}
+
+element selected {
+    background-color:               @selected;
+    text-color:                     @text;
+}
+
+element selected.urgent {
+    background-color:               @urgent;
+    text-color:                     @text;
+}
+
+element selected.active {
+    background-color:               @background-alt;
+    color:                          @foreground;
+}
