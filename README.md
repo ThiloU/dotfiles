@@ -30,7 +30,7 @@ These have to be applied in `xfce4-appearance-settings` (also in in `xfwm4-setti
 
 ### Rofi
 The /.config/rofi files are from [here](https://github.com/adi1090x/rofi).
-Every configuration can be launched by running launch.sh in the appropriate directory  
+Every configuration can be launched by running the shell script in the appropriate directory  
 (e.g. for the powermenu run `~/.config/rofi/powermenu/powermenu.sh`).
 
 
