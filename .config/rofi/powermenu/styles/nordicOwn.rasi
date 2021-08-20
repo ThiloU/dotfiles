@@ -1,5 +1,5 @@
 * {
-    background:                     #17213355;
+    background:                     #282c34;
     background-alt:                 #475C7Bff;
     foreground:                     #FFFFFFaa;
     text:                           #d8dee9ff;
@@ -8,7 +8,7 @@
     border-alt:               		#DA717Fff;
     selected:               		#10101070;
     urgent:                         #DA4453FF;
-    accentAlt:                      #4c566aaa;
-    accent:                         #d8dee9af;
+    accentAlt:                      #98a6c1;
+    accent:                         #4c5362;
     alpha:                          #00000000;
 }
