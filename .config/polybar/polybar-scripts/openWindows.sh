@@ -6,18 +6,18 @@
 
 active_text_color="#E0E3F0"
 # active_bg="#4C566A"
-active_bg="#7785b0e8"
-active_underline=
+active_bg="#b95f6473"
+active_underline="#ffffff"
 
 inactive_text_color="#E0E3F0"
 inactive_bg=
 inactive_underline=
 
-minimized_text_color="#6b6b6b"
+minimized_text_color="#a1a1a1"
 
 separator="·"
 show="window_title" # options: window_title, window_class, window_classname
-forbidden_classes="Polybar Conky Gmrun"
+forbidden_classes="Polybar Plank GLava"
 empty_desktop_message=" "
 
 char_limit=20
