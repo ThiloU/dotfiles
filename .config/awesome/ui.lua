@@ -114,12 +114,27 @@ awful.rules.rules = {
     
     { rule = { 
       class = "Polybar" }, 
+      properties = {  focusable = false, titlebar = false, border_width = 0 } },
 
-      properties = { focusable = false } }, -- prevent polybar from being focused
+    { rule = { 
+      class = "Polydock" }, 
+      properties = {  focusable = false, titlebar = false, border_width = 0 } },
 
-      
+    { rule = { 
+      class = "Plank" }, 
+      properties = {titlebar = false, border_width = 0, below = true, focusable = false } },
+
+    { rule = { 
+      class = "GLava" }, 
+      properties = {  focusable = false, 
+                      titlebars_enabled = false, 
+                      border_width = 0, 
+                      maximized = true, 
+                      below = true,
+                      sticky = true} 
+      },
+                    
     { rule = { 
       class = "Chromium-browser" },  
-
       properties = {floating = false}},
 }
