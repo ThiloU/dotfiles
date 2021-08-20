@@ -13,7 +13,8 @@ local wibox = require("wibox")
 -- Theme handling library
 local beautiful = require("beautiful")
 beautiful.init("/home/thilo/.config/awesome/themes/one_darker/theme.lua")
---beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+
+
 
 -- Error Handling
 require("error_handling")
@@ -40,8 +41,6 @@ require("menu")
 -- Wibar
 require("bar")
 
--- Import better Alt-Tab switcher
-switcher = require("awesome-switcher")
 
 -- Set keys
 root.keys(globalkeys)
@@ -51,16 +50,11 @@ root.keys(globalkeys)
 -- Signal function to execute when a new client appears.
 client.connect_signal("manage", function (c)
     -- show titlebar of new window
-    if c.class ~= "Polybar" then
-        if c.first_tag.layout.name == "floating" then
-            awful.titlebar.show(c)
-        else
-            awful.titlebar.hide(c)
-        end
-    else
+
+    if c.first_tag.layout.name ~= "floating" then
         awful.titlebar.hide(c)
-        c.border_width = 0
     end
+    
 
     -- Set the windows at the slave,
     -- i.e. put it at the end of others instead of setting it master.
