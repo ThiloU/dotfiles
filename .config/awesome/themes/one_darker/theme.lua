@@ -39,7 +39,7 @@ theme.menu_width  = 150
 
 
 -- Background
-theme.bg_normal = "#353c4a"
+theme.bg_normal = "#313742"
 theme.bg_dark = "#121212"
 theme.bg_urgent = "#181a1f"
 theme.bg_focus = "#4c566a"
@@ -52,12 +52,12 @@ theme.fg_urgent = "#f8f8f0"
 theme.fg_minimize = "#f8f8f0"
 
 -- Corner Radius
-theme.corner_radius = dpi(20)
+theme.corner_radius = dpi(7)
 
 -- Window Borders
-theme.border_width = dpi(2)
-theme.border_normal = "#353c4a"
-theme.border_focus = "#4c566a"
+theme.border_width = dpi(0)
+theme.border_normal = "#3E435C"
+theme.border_focus = "#708ED2"
 theme.border_marked = theme.fg_urgent
 
 -- Taglist
