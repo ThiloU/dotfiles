@@ -1,11 +1,4 @@
-/*
- *
- * Author  : Aditya Shakya
- * Mail    : adi1090x@gmail.com
- * Github  : @adi1090x
- * Twitter : @adi1090x
- *
- */
+
 
 configuration {
 	font:							"Iosevka Nerd Font 10";
@@ -14,7 +7,7 @@ configuration {
     display-drun: 					"";
     drun-display-format:            "{name}";
     disable-history:                false;
-    fullscreen:                     true;
+    fullscreen:                     false;
 	hide-scrollbar: 				true;
 	sidebar-mode: 					false;
 }
@@ -25,14 +18,14 @@ window {
     transparency:                   "real";
     background-color:               @bg;
     text-color:                     @fg;
-	border:							0px;
+	border:							1px;
 	border-color:					@ac;
-    border-radius:                  0px;
-	width:							18%;
-  height:             50%;
-    location:                       northwest;
-    x-offset:                       20;
-    y-offset:                       52;
+    border-radius:                  7px;
+	width:							40%;
+  height:                           80%;
+    location:                       center;
+    x-offset:                       0;
+    y-offset:                       0;
 }
 
 prompt {
@@ -56,20 +49,20 @@ entry {
 
 inputbar {
 	children: 						[ prompt, entry ];
-    background-color:               @ac;
+    background-color:               @acAlt;
     text-color:                     @bg;
     expand:                         false;
 	border:							0% 0% 0% 0%;
-    border-radius:                  20px;
+    border-radius:                  7px;
 	border-color:					@ac;
-    margin:                         0% 0% 0% 0%;
+    margin:                         1.5% 0.5% 1.5% 0.5%;
     padding:                        1.5%;
 }
 
 listview {
     background-color:               @al;
-    padding:                        0px;
-    columns:                        1;
+    padding:                        1%;
+    columns:                        3;
     lines:                          5;
     border-radius:                  20px;
     spacing:                        0%;
@@ -85,7 +78,7 @@ mainbox {
 	border-color:					@ac;
     children:                       [ inputbar, listview ];
     spacing:                       	1%;
-    padding:                        20% 40% 20% 40%;
+    padding:                        0% 0% 0% 0%;
 }
 
 element {
@@ -112,6 +105,6 @@ element selected {
     background-color:               @se;
     text-color:                     @fg;
 	border:							0% 0% 0% 0%;
-    border-radius:                  20px;
+    border-radius:                  7px;
     border-color:                  	@bg;
 }
