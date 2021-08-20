@@ -1,0 +1,18 @@
+[color]
+
+gradient = 1
+gradient_count = 8
+gradient_color_1 = '#f7768e'
+gradient_color_2 = '#ff9e64'
+gradient_color_3 = '#e0af68'
+gradient_color_4 = '#9ece6a'
+gradient_color_5 = '#73daca'
+gradient_color_6 = '#b4f9f8'
+gradient_color_7 = '#2ac3de'
+gradient_color_8 = '#7dcfff'
+
+[general]
+autosens = 1 
+
+[output]
+channels = stereo 
