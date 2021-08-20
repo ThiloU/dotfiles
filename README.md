@@ -3,7 +3,6 @@ These are all the configuration files for my (OpenSuse Tumbleweed) system.
 
 ### Dependencies
 
-###### Programs
 - polybar
 - rofi
 - alacritty
@@ -17,19 +16,14 @@ These are all the configuration files for my (OpenSuse Tumbleweed) system.
 - xprop
 - awesome
 
-###### Fonts
-The fonts can be installed by moving the font files to ~/.local/share/fonts/
-- [Font Awesome v5](https://fontawesome.com/v5.15/how-to-use/on-the-desktop/setup/getting-started)
 
-### Themes
-These have to be applied in `xfce4-appearance-settings` (also in in `xfwm4-settings` if you are using xfwm4)
-- [Nord (Atom, Alacritty, ...)](https://www.nordtheme.com/ports)
-- [Firefox Theme](https://github.com/daaniiieel/nord-firefox)
-- [xfce](https://www.xfce-look.org/p/1267246/) my modified version is found in ./themes
+### Themes not included in the dotfiles
+- [Visual Studio Code](https://github.com/one-dark/vscode-one-dark-theme)
+- [Firefox](https://github.com/daaniiieel/nord-firefox)
 
 
 ### Rofi
-The /.config/rofi files are from [here](https://github.com/adi1090x/rofi).
+My configs are built upon [these](https://github.com/adi1090x/rofi).
 Every configuration can be launched by running the shell script in the appropriate directory  
 (e.g. for the powermenu run `~/.config/rofi/powermenu/powermenu.sh`).
 
@@ -37,13 +31,13 @@ Every configuration can be launched by running the shell script in the appropria
 ### Polybar
 To run polybar, execute `~/.config/polybar/launch.sh`  
 The GPU module works with the `nvidia-smi` command, so you need a Nvidia GPU to use that module.  
-The code for the GPU, CPU, PulseAudio and openWindows modules is located in /.config/polybar/polybar-scripts/.  You can left-click on the GPU / CPU modules to open nvidia-smi / htop.  
+You can left-click on the GPU / CPU modules to open nvidia-smi / htop.  
 The terminal these commands will get displayed in is alacritty, but this can be changed in the file /.config/polybar/modules.ini.  
-The audio manager was made [here](https://github.com/marioortizmanero/polybar-pulseaudio-control) and the openWindows script was originally made [there](https://github.com/tam-carre/polywins).
+The audio manager was made [here](https://github.com/marioortizmanero/polybar-pulseaudio-control) and the openWindows script was originally made [here](https://github.com/tam-carre/polywins).
 
 ### Picom
 I am using a [custom picom fork](https://github.com/ibhagwan/picom) for dual_kawase blur and rounded window borders.
-You may have to recompile it, but there is a precompiled binary in the ./picom folder.
+You have to compile it yourself and  replace the precompiled binary in the ./picom folder.
 Execute it using `~/.config/picom/ibhagwan-picom/picom --experimental-backends --xrender-sync-fence`.
 
 ### AwesomeWM
