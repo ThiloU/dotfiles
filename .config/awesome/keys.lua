@@ -57,34 +57,26 @@ globalkeys = gears.table.join(
         awful.key({ modkey,           }, "u", awful.client.urgent.jumpto,
                 {description = "jump to urgent client", group = "client"}),
 
-        awful.key({ "Mod1",           }, "Tab",
-            function ()
-                switcher.switch( 1, "Mod1", "Alt_L", "Shift", "Tab")
-            end),
-    
-        awful.key({ "Mod1", "Shift"   }, "Tab",
-            function ()
-                switcher.switch(-1, "Mod1", "Alt_L", "Shift", "Tab")
-            end),
-        -- awful.key({ modkey,           }, "Tab",                         -- Super + Tab behaviour block start
-        --           function ()
-        --               -- awful.client.focus.history.previous()
-        --               awful.client.focus.byidx(-1)
-        --               if client.focus then
-        --                   client.focus:raise()
-        --               end
-        --           end,
-        --     {description = "go to next client", group = "client"}),
 
-        --       awful.key({ modkey, "Shift"   }, "Tab",
-        --           function ()
-        --               -- awful.client.focus.history.previous()
-        --               awful.client.focus.byidx(1)
-        --               if client.focus then
-        --                   client.focus:raise()
-        --               end
-        --           end,
-        --     {description = "go to previous client", group = "client"}),  -- Super + Tab behaviour block end
+        awful.key({ modkey,           }, "Tab",                         -- Super + Tab behaviour block start
+                  function ()
+                      -- awful.client.focus.history.previous()
+                      awful.client.focus.byidx(-1)
+                      if client.focus then
+                          client.focus:raise()
+                      end
+                  end,
+            {description = "go to next client", group = "client"}),
+
+              awful.key({ modkey, "Shift"   }, "Tab",
+                  function ()
+                      -- awful.client.focus.history.previous()
+                      awful.client.focus.byidx(1)
+                      if client.focus then
+                          client.focus:raise()
+                      end
+                  end,
+            {description = "go to previous client", group = "client"}),  -- Super + Tab behaviour block end
 
         -- Restore minimized
         awful.key({ modkey, "Control" }, "n",
@@ -98,6 +90,7 @@ globalkeys = gears.table.join(
                 end
             end,
             {description = "restore minimized", group = "client"}),
+
 
     -- Awesome --
 
@@ -133,7 +126,7 @@ globalkeys = gears.table.join(
 
             barVisible = not barVisible
         end,
-        {description = "hide the top bar", group = "awesome"}),
+        {description = "toggle visibility of top panel", group = "awesome"}),
 
     -- Launcher --
 
@@ -238,18 +231,40 @@ for i = 1, 9 do
                           end
                       end
                   end,
-                  {description = "toggle focused client on tag #" .. i, group = "tag"})
+                  {description = "toggle focused client on tag #" .. i, group = "tag"}),
+               
+                  
+        -- useless gaps change
+        awful.key({ modkey, "Control" }, "+", 
+                function () 
+                    awful.screen.focused().selected_tag.gap = awful.screen.focused().selected_tag.gap + 0.2
+                end, 
+                {description = "increment useless gaps", group = "tag"}),
+
+        awful.key({ modkey, "Control" }, "-", 
+                function () 
+                    awful.screen.focused().selected_tag.gap = awful.screen.focused().selected_tag.gap - 0.2
+                end, 
+                {description = "decrement useless gaps", group = "tag"})
     )
 end
 
 -- Applied in the ui.lua to be managed by all clients
 clientkeys = gears.table.join(
+
+    awful.key({ modkey, "Control"}, "t",                         
+        function (c)
+            awful.titlebar.toggle(c)
+        end,
+    {description = "toggle visibility of titlebars", group = "client"}),
+
     awful.key({ modkey,           }, "f",
         function (c)
             c.fullscreen = not c.fullscreen
             c:raise()
         end,
-        {description = "toggle fullscreen", group = "client"}),
+    {description = "toggle fullscreen", group = "client"}),
+
     awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end,
               {description = "close", group = "client"}),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ,
@@ -286,3 +301,4 @@ clientkeys = gears.table.join(
         end ,
         {description = "(un)maximize horizontally", group = "client"})
 )
+
