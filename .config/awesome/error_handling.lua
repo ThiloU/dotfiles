@@ -1,4 +1,4 @@
--- Standard awesome library
+--- Standard awesome library
 local awful = require("awful")
 
 -- Notification library
