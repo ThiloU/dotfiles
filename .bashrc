@@ -8,7 +8,7 @@ alias foliendvi="xdvi -paper a4r -s 9 -geometry -0+50"
 
 alias emacs="\emacs --no-splash -geometry 100x54+80-0"
 
-
+alias qrencode="qrencode -t ANSIUTF8"
 
 
 ############### make a pretty promt
