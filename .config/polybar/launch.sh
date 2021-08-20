@@ -6,6 +6,10 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch the bar
-polybar -q -c ~/.config/polybar/config applications -r &
-polybar -q -c ~/.config/polybar/config system -r &
-polybar -q -c ~/.config/polybar/config taskbar -r &
+# polybar -q -c ~/.config/polybar/config applications -r &
+# polybar -q -c ~/.config/polybar/config system1 -r &
+# polybar -q -c ~/.config/polybar/config system2 -r &
+# polybar -q -c ~/.config/polybar/config taskbar -r &
+# polybar -q -c ~/.config/polybar/config workspaces -r &
+
+polybar -q -c ~/.config/polybar/config main -r &
