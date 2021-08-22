@@ -1,5 +1,6 @@
 # dotfiles
-These are all the configuration files for my (OpenSuse Tumbleweed) system.
+![Screenshot](/screenshots/riceScreenshot.png)
+These are all the configuration files for my system.
 
 ### Dependencies
 
@@ -17,7 +18,7 @@ These are all the configuration files for my (OpenSuse Tumbleweed) system.
 - awesome
 
 
-### Themes not included in the dotfiles
+### Themes not included in this repository
 - [Visual Studio Code](https://github.com/one-dark/vscode-one-dark-theme)
 - [Firefox](https://github.com/daaniiieel/nord-firefox)
 
@@ -47,6 +48,6 @@ As a window manager I use AwesomeWM instead of the default xfwm4. To change the 
 - `xfconf-query -c xfce4-session -p /sessions/Failsafe/Client1_Command -t string -sa WM_NAME`  
 (where you would replace WM_NAME with awesome)
 
+### Wallpaper
 
-
-
+Can be found in the [screenshots](https://github.com/ThiloU/dotfiles/tree/master/screenshots) folder.
